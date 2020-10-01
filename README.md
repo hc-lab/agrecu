@@ -1,2 +1,0 @@
-# agrecu
-Tienda Virtual AGRECU
