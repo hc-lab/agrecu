@@ -7,7 +7,7 @@ class Producto(models.Model):
     precio = models.IntegerField()
 
     def __str__(self):
-        return "producto: {} precio: $ {}".format(self.nombre, self.precio)
+        return "producto: {} precio: s/. {}".format(self.nombre, self.precio)
 
 
 class Comentario(models.Model):

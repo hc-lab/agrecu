@@ -2,16 +2,16 @@
 
 {% block contenido %}
 <div class="container">
-    <center>    
+    <center>
         <h1>
-            <span class="new badge" data-badge-caption="">{{object.precio}} $</span>
+            <span class="new badge" data-badge-caption="">{{object.precio}} $</span><span class="blue-text text-darken-2">
             {{object.nombre}}
         </h1>
     </center>
 
     <div class="slider">
         <ul class="slides">
-            
+
             {% for imagen in object.producto_imagenes.all  %}
             <li>
                 <img src="/media/{{imagen.imagen}}"> <!-- random image -->
@@ -32,7 +32,7 @@
     <br>
 
     <ul class="collection">
-        
+
         {% for comentario in object.producto_comentarios.all %}
             <li class="collection-item">
                 <span class="title">mensaje</span>
@@ -77,12 +77,12 @@
         <input type="hidden" name="usuario" value="{{request.user.pk}}">
         <input type="hidden" name="producto" value="{{object.pk}}">
         <input type="hidden" name="precio" value="{{object.precio}}">
-        
+
         <button class="btn-floating btn-large red pulse">
             <i class="large material-icons">add_shopping_cart</i>
         </button>
     </form>
-    
+
     <ul>
     </ul>
 </div>
