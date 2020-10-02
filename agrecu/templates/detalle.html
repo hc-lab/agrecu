@@ -14,12 +14,14 @@
 
         <div class="slider">
             <ul class="slides">
-                <li>
-                <img src="imagenes/imagen.jpeg"> <!-- random image -->
-                <div class="caption center-align">
-                    <h5 class="light grey-text text-lighten-3" >Here's our small slogan.</h5>
-                </div>
-                </li>
+                  {% for imagen in object.producto_imagenes.all %}
+                  <li>
+                    <img src="/media/{{imagen.imagen}}"> <!-- random image -->
+                    <div class="caption center-align">
+                      <h5 class="light grey-text text-lighten-3" >{{imagen.descripcion}}</h5>
+                    </div>
+                  </li>
+                  {% endfor %}
 
             </ul>
             </div>
