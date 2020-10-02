@@ -7,8 +7,8 @@
     <div class="container">
         <center>
             <h1>
-                <span class="new badge" data-badge-caption="">{{object.}}</span>
-                producto
+                <span class="new badge" data-badge-caption="">{{object.precio}}</span>
+                {{object.nombre}}
             </h1>
         </center>
 
@@ -27,7 +27,7 @@
         <br>
         <div class="col s8 z-depth-1">
             <center>
-                descripción
+                {{object.descripcion}}
             </center>
         </div>
         <br>
@@ -58,45 +58,4 @@
 
     </div>
 
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red pulse">
-            <i class="large material-icons">add_shopping_cart</i>
-        </a>
-        <ul>
-        </ul>
-    </div>
-
-
-    <footer class="page-footer teal">
-        <div class="container">
-            <div class="row">
-
-            <div class="col l12 s12">
-                <h5 class="white-text">Somos los mejores!</h5>
-                <p class="grey-text text-lighten-4">
-                    Enviamos a todo el país
-                </p>
-
-
-            </div>
-
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container">
-                <center>
-                    Todos los derechos reservados 2019
-                </center>
-            </div>
-        </div>
-        </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
-</html>
+{% endblock contenido %}
