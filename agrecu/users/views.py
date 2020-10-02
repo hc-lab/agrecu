@@ -11,7 +11,7 @@ from django.db.models import Q, Max, Min
 
 
 
-from agrecu.productos.models import Producto, Comentario, CarritoCompras
+from tienda.productos.models import Producto, Comentario, CarritoCompras
 
 User = get_user_model()
 
@@ -55,7 +55,7 @@ class ListadoProducto(ListView):
         else:
             productos = Producto.objects.all()
         return productos
-
+    
     def get_context_data(self, **kwargs):
         context = super(ListadoProducto, self).get_context_data(**kwargs)
         context['maximo'] = Producto.objects.all().aggregate(Max('precio'))['precio__max']
@@ -197,7 +197,7 @@ class SummaryView(TemplateView):
                 if len(carritoModels) != 0:
                     print("compra realizada exitosamente")
 
-            # 104 error
+            # 104 error 
             # 5 expirada
             # 6 declinada
             elif state_pol == '104' or state_pol == '5' or state_pol == '6':
@@ -249,7 +249,7 @@ def updateCar(request):
         maximo_identificador = 0
     maximo_identificador =  maximo_identificador + 1
     currency = 'COP'
-
+    
     carritos = request.user.carrito_usuario.all().filter(comprado = False, pendiente = False)
 
     amount = 0
